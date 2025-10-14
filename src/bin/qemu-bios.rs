@@ -5,10 +5,11 @@ use std::{
 
 fn main() {
     let mut qemu = Command::new("qemu-system-x86_64");
-    qemu.arg("-serial");
-    qemu.arg("stdio");
-    qemu.arg("-drive");
-    qemu.arg(format!("format=raw,file={}", env!("BIOS_IMAGE")));
+    qemu.args([
+        "-serial", "stdio",
+        "-drive", &format!("format=raw,file={}", env!("BIOS_IMAGE")),
+        // "-s", "-S", // for gdb
+    ]);
     let exit_status = qemu.status().unwrap();
     process::exit(exit_status.code().unwrap_or(-1));
 }

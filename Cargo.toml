@@ -7,6 +7,7 @@ edition = "2021"
 members = ["kernel"]
 
 [dependencies]
+bootloader = "0.11.12"
 ovmf-prebuilt = "0.2.3"
 
 
