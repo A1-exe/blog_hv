@@ -1,3 +1,6 @@
 [submodule "kernel"]
 	path = kernel
 	url = git@github.com:A1-exe/blog_hv_kernel.git
+[submodule "hypervisor"]
+	path = hypervisor
+	url = ./
