@@ -3,4 +3,4 @@
 	url = git@github.com:A1-exe/blog_hv_kernel.git
 [submodule "hypervisor"]
 	path = hypervisor
-	url = ./
+	url = git@github.com:A1-exe/blog_hv_vmm.git
